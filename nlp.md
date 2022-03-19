@@ -35,6 +35,26 @@ We can separate process by:
    - Sufix (km, ), ',', '.', '!', ...) 
    - Infix ( - , --, /, ...)
    - Exception (Ponctuantion Rules)
- - Stemming
- - Lemmatization
+ - Stemming:
+   -  Method to categorize words from ROOT word.
+   -  "Cuidarei" -> "Cuidar"
+   -  Stemming is a critical and hard proccess, since that Spacy choose to use Lemmatization instead of Stemming.
+   -  Porter's Algorithm:
+      -  Five phases of word reduction
+      -  Mapping Rules. Example SSES -> SS, IES -> I
+      -  Can use Length/Complexuty of a word to apply a rule. Example: m>0 ATIONAL -> ATE
+      -  Snowball -> Stemming language more accurately of Porter's Algorithm.
+      ![Stemming](./.images/stemming.png)
+ - Lemmatization:
+   - Considers full language vocabulary to apply morphological analysis to words.
+   - mice -> mouse
+   - Was -> Be
+   - Depends yet on the Sentence use.
+   - Its needed a lot of information to build a Lemmatization
  - Stop Words
+   - Words that appear so frequentely that doesn't need to be tagged ("the", "a")
+   - They can be filtered from tests
+
+Vocabulary and Matching
+ - Match and label specific phrases.
+ - Powerfull Regex with POS in account. 
